@@ -10,8 +10,8 @@ python train_mts.py $ptb_specs  --epoch 1000 --save baseline_ptb.pt --baseline >
 python train_mts.py $ptb_specs  --epoch 1000 --save mts_ptb.pt > result_mts.txt
 #evaluate both the models on ptb test data
 echo Evaluate Multi-timescale LSTM LM
-python model_evaluation.py --model_name baseline_ptb.pt --data data/penn/ --model_performance
+python util/model_evaluation.py --model_name baseline_ptb.pt --data data/penn/ --model_performance
 echo Evaluate Standard LSTM LM
-python model_evaluation.py --model_name mts_ptb.pt --data data/penn/ --model_performance
+python util/model_evaluation.py --model_name mts_ptb.pt --data data/penn/ --model_performance
 echo Perform statistical evaluation
-python model_evaluation.py --model_name ~/new_awd/awd-lstm-lm/mts_ptb.pt --baseline_model ~/new_awd/awd-lstm-lm/baseline_ptb.pt --significance_testing --data data/penn --cuda
+python util/model_evaluation.py --model_name ~/new_awd/awd-lstm-lm/mts_ptb.pt --baseline_model ~/new_awd/awd-lstm-lm/baseline_ptb.pt --significance_testing --data data/penn --cuda
