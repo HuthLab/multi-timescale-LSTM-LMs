@@ -91,7 +91,7 @@ if __name__ == '__main__':
     parser.add_argument("-u", "--units", type=int, default=256, help="Number of cells in the RNN per layer")
     parser.add_argument("-l", "--layers", type=int, default=1, help="Number of layers")
     parser.add_argument("-e", "--epochs", type=int, default=50, help="Maximum number of epochs")
-    parser.add_argument("-b", "--batch_size", type=int, default=128, help="Batch size")
+    parser.add_argument("-b", "--batch_size", type=int, default=32, help="Batch size")
     parser.add_argument("--lr", type=float, default=1e-4, help="Learning rate")
     parser.add_argument('-le', "--load_epoch", type=int, help="Epoch number to load from", default=None)
     parser.add_argument("--alpha", type=float, default=1.5, help="Alpha for Inv Gamma initialization")
