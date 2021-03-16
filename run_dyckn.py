@@ -85,7 +85,7 @@ def main(input_path, output_path, model_name, units, n_layers, lr, batch_size, m
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('-o', default='./results/', type=str, help='Output directory')
+    parser.add_argument('-o', default='./results/dyckn/', type=str, help='Output directory')
     parser.add_argument('-i', default='./data/dyckn/', type=str, help='Input data directory')
     parser.add_argument('-m', "--model", type=str, default="Baseline", choices=['Baseline', 'MTS'], help="Model (from choices)")
     parser.add_argument("-u", "--units", type=int, default=256, help="Number of cells in the RNN per layer")
