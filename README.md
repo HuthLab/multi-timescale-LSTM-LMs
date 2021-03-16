@@ -1,4 +1,4 @@
-Code associated with ICLR 2021 paper: Mahto, S., Vo, V.A., Turek, J.S., Huth, A. "Multi-timescale representation learning in LSTM language models."
+Code associated with ICLR 2021 paper: Mahto, S., Vo, V.A., Turek, J.S., Huth, A. "[Multi-timescale representation learning in LSTM language models.](https://openreview.net/forum?id=9ITXiTrAoT)"
 
 This is adapted from the AWD-LSTM-LM code available here: [https://github.com/salesforce/awd-lstm-lm](https://github.com/salesforce/awd-lstm-lm). To more closely reproduce their results with Pytorch 0.4, see the `legacy` folder.
 
@@ -62,7 +62,24 @@ The option `--jobs <num_cores>` allows to parallelize and generate the dataset f
 
 To train the models use the command: 
 ```python
-python run_dyckn.py -u 256 -l 1 --epochs 2000 -s 200 --lr 1e-4 --batch_size 32  --model MTS --alpha 1.5 --scale 1.0
+python run_dyckn.py -u 256 -l 1 --epochs 2000 -s 200 --lr 1e-4 --batch_size 32 --seed 1 --model MTS --alpha 1.50 --scale 1.0 -o ./results/dyckn/MTS_u256_l1_e2000_b32_s200_lr0.0001_sc1.00_a1.50_seed1/
 ```
 
 Use `--model MTS` for the multi-timescale LSTM model and `--model Baseline` for the baseline LSTM model.
+The experiment in the paper used seeds {1..20} for both networks.
+
+
+### Citation
+Please, cite this paper as follows:
+
+Mahto, S., Vo, V.A., Turek, J.S., Huth, A. "Multi-timescale representation learning in LSTM language models", International Conference on Learning Representations, May 2021.
+
+```
+@inproceedings{ mahto2021multitimescale,
+    title={Multi-timescale Representation Learning in {\{}LSTM{\}} Language Models},
+    author={Shivangi Mahto and Vy Ai Vo and Javier S. Turek and Alexander Huth},
+    booktitle={International Conference on Learning Representations},
+    year={2021},
+    url={https://openreview.net/forum?id=9ITXiTrAoT}
+}
+```
