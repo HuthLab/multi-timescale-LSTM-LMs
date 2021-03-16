@@ -62,7 +62,7 @@ The option `--jobs <num_cores>` allows to parallelize and generate the dataset f
 
 To train the models use the command: 
 ```python
-python run_dyckn.py -u 256 -l 1 --epochs 2000 -s 200 --lr 1e-4  --model MTS
+python run_dyckn.py -u 256 -l 1 --epochs 2000 -s 200 --lr 1e-4  --model MTS --alpha 1.5 --scale 1.0
 ```
 
 Use `--model MTS` for the multi-timescale LSTM model and `--model Baseline` for the baseline LSTM model.
