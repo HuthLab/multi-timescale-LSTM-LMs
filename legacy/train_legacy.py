@@ -5,6 +5,12 @@ import numpy as np
 import torch
 import torch.nn as nn
 
+import os
+from os.path import dirname, abspath
+import sys
+parent_dir = dirname(dirname(abspath(__file__)))
+sys.path.insert(0, parent_dir)
+
 import data
 
 from utils import batchify, get_batch, repackage_hidden
@@ -70,7 +76,7 @@ args.tied = True
 
 if not args.baseline:
     print("Importing Multi-timescale LM")
-    import ../model_mts as model
+    import model_mts as model
 else:
     print("Importing Standard LM")
     import model as model
@@ -96,7 +102,6 @@ def model_load(fn):
     with open(fn, 'rb') as f:
         model, criterion, optimizer = torch.load(f)
 
-import os
 import hashlib
 fn = 'corpus.{}.data'.format(hashlib.md5(args.data.encode()).hexdigest())
 if os.path.exists(fn):
