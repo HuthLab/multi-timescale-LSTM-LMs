@@ -1,13 +1,19 @@
-# Codes for training a multi-timescale (MTS) language model. 
+Code associated with ICLR 2021 paper: Mahto, S., Vo, V.A., Turek, J.S., Huth, A. "Multi-timescale representation learning in LSTM language models."
+
+This is adapted from the AWD-LSTM-LM code available here: [https://github.com/salesforce/awd-lstm-lm](https://github.com/salesforce/awd-lstm-lm)
+
+# Commands for training a multi-timescale (MTS) language model 
 ## Required dependencies: Python3.6 or above, Numpy, Scipy and Pytorch1.7.0 or above with CUDA version 10.1 
 
-## Example script: to train and evaluate a standard and MTS LM on PTB dataset:
+### Example script to train and evaluate a standard and MTS LM on PTB dataset:
 
-### bash run.sh
+bash run.sh
 
-## Detailed description:
+### Detailed description:
 
-### 1. To download PTB/WIKI data: bash getdata.sh
+### 1. To download PTB/WIKI data:
+
+bash getdata.sh
 
 ### 2. model_mts.py defines the multi-timescale language model.
 
