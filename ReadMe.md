@@ -34,3 +34,14 @@ python model_evaluation.py --model_name train_mts.pt --data data/penn/
 
 #### Trained LM on Wiki data: 
 python model_evaluation.py --model_name train_mts.pt --data data/wikitext-2/
+
+
+# Formal Language: Dyck-2 Grammar
+ 
+## Creating the dataset:
+
+```python
+python create_dyckn.py 2 -p 0.25 0.25 -q 0.25 --train 10000 --validation 2000 --test 5000 --max_length 200
+```
+
+The option `--jobs <num_cores>` allows to parallelize and generate the dataset faster.  
