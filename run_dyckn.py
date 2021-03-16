@@ -16,7 +16,8 @@ def main(input_path, output_path, model_name, units, n_layers, lr, batch_size, m
     experiment_name = 'DyckN'
     USE_CUDA = torch.cuda.is_available()
     device = torch.device("cuda" if USE_CUDA else "cpu")
-
+    print(device)
+    
     # Set torch's random seed
     torch.manual_seed(rand_seed)
 
