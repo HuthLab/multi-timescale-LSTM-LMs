@@ -45,3 +45,12 @@ python create_dyckn.py 2 -p 0.25 0.25 -q 0.25 --train 10000 --validation 2000 --
 ```
 
 The option `--jobs <num_cores>` allows to parallelize and generate the dataset faster.  
+
+## Training the models:
+
+To train the models use the command: 
+```python
+python run_dyckn.py -u 256 -l 1 --epochs 2000 -s 200 --lr 1e-4  --model MTS
+```
+
+Use `--model MTS` for the multi-timescale LSTM model and `--model Baseline` for the baseline LSTM model.
