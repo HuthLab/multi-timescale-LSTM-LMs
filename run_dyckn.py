@@ -62,7 +62,7 @@ def main(input_path, output_path, model_name, units, n_layers, lr, batch_size, m
         load_checkpoint_epoch=load_epoch,
         name=experiment_name,
         device=device,
-        print_steps=1000,
+        print_steps=100,
         checkpoint_directory=output_path,
         save_every=50,
     )
